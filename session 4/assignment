@@ -1,0 +1,36 @@
+Questions
+
+    1 What are the three states of a Promise?
+
+        Pending: The initial state, neither fulfilled nor rejected.
+        Fulfilled: The operation completed successfully.
+        Rejected: The operation failed.
+
+
+    2 How does the async keyword affect a function's return value?
+
+        - An async function always returns a Promise. If the function returns a value, the Promise is resolved with that value
+
+    3 Explain the purpose of the await keyword.
+
+       -  Asynchronous operations are essential for tasks that take an unknown amount of time to complete, such as network requests,
+        file I/O, or any operation that involves waiting
+
+    4 What is a callback function and how is it used in asynchronous operations?
+        - A callback is a function that is passed as an argument to another function and is executed after some operation has been completed
+        - allowing you to continue executing code while waiting for an operation to complete
+
+    5 Describe the role of the event loop in JavaScript.
+        -The Event Loop is a fundamental concept in JavaScript that allows for non-blocking, asynchronous operations. It is responsible for executing the code,
+         collecting and processing events, and executing queued sub-tasks
+    6 Write a function called delayedGreeting that takes a name as an argument and logs a greeting message to the console after a 2-second delay using setTimeout. Use a callback function to achieve this.
+
+        function delayedGreeting(name, callback) {
+        setTimeout(() => {
+            callback(`Hello, ${name}!`);
+        }, 2000);
+      }
+
+      delayedGreeting("John", (message) => {
+        console.log(message);
+      });
